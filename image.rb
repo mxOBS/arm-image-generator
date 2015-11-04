@@ -66,6 +66,8 @@ class Image
     else
       @rootfsmntpt = "#{@loop}p1"
     end
+    puts 'Waiting for loopback-device to settle'
+    sleep(1)
   end
 
   def loop_teardown
